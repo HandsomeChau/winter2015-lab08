@@ -24,6 +24,7 @@ class Application extends CI_Controller
     {
         parent::__construct();
         $this->data = array();
+        $this->data['sessionid'] = session_id();
         $this->data['title'] = "Top Secret Government Site";    // our default title
         $this->errors = array();
         $this->data['pageTitle'] = 'welcome';   // our default page
@@ -42,6 +43,23 @@ class Application extends CI_Controller
         $this->parser->parse( '_template', $this->data );
     }
 
+    function restrict( $roleNeeded = NULL )
+    {
+        $userRole = $this->session->userdata( 'userRole' );
+        if ( $roleNeeded != NULL ) {
+            if ( is_array( $roleNeeded ) ) {
+                if ( !in_array( $userRole, $roleNeeded ) ) {
+                    redirect( "/" );
+
+                    return;
+                }
+            } else if ( $userRole != $roleNeeded ) {
+                redirect( "/" );
+
+                return;
+            }
+        }
+    }
 }
 
 /* End of file MY_Controller.php */

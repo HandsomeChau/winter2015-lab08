@@ -1,15 +1,17 @@
 <?php
 
 /**
- * Our homepage. 
- * 
+ * Our homepage.
+ *
  * controllers/Welcome.php
  *
  * ------------------------------------------------------------------------
  */
-class Welcome extends Application {
+class Welcome extends Application
+{
 
-    function __construct() {
+    function __construct()
+    {
         parent::__construct();
     }
 
@@ -17,7 +19,8 @@ class Welcome extends Application {
     //  Homepage: show home-y stuff
     //-------------------------------------------------------------
 
-    function index() {
+    function index()
+    {
         $this->data['pagebody'] = 'homepage';
         $this->render();
     }

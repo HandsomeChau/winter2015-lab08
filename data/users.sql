@@ -1,7 +1,9 @@
 CREATE TABLE IF NOT EXISTS `users` (
-`id` varchar(10) NOT NULL,
-`name` varchar(20) NOT NULL,
-`password` varchar(64) NOT NULL,
-`role` varchar(20) NOT NULL,
-PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1; 
+  `id`       VARCHAR(10) NOT NULL,
+  `name`     VARCHAR(20) NOT NULL,
+  `password` VARCHAR(64) NOT NULL,
+  `role`     VARCHAR(20) NOT NULL,
+  PRIMARY KEY (`id`)
+)
+  ENGINE = MyISAM
+  DEFAULT CHARSET = latin1;

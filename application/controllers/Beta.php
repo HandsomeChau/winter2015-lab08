@@ -1,15 +1,17 @@
 <?php
 
 /**
- * Our registered users' content. 
- * 
+ * Our registered users' content.
+ *
  * controllers/Welcome.php
  *
  * ------------------------------------------------------------------------
  */
-class Beta extends Application {
+class Beta extends Application
+{
 
-    function __construct() {
+    function __construct()
+    {
         parent::__construct();
     }
 
@@ -17,7 +19,8 @@ class Beta extends Application {
     //  Stuff that should only be seen by logged in users
     //-------------------------------------------------------------
 
-    function index() {
+    function index()
+    {
         $this->data['pagebody'] = 'beta';
         $this->render();
     }

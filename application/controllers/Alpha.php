@@ -1,15 +1,17 @@
 <?php
 
 /**
- * Our public content. 
- * 
+ * Our public content.
+ *
  * controllers/Welcome.php
  *
  * ------------------------------------------------------------------------
  */
-class Alpha extends Application {
+class Alpha extends Application
+{
 
-    function __construct() {
+    function __construct()
+    {
         parent::__construct();
     }
 
@@ -17,7 +19,8 @@ class Alpha extends Application {
     //  Stuff for everyone
     //-------------------------------------------------------------
 
-    function index() {
+    function index()
+    {
         $this->data['pagebody'] = 'alpha';
         $this->render();
     }
